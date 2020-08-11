@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "test:staged": "jest  --passWithNoTests"
+    "test": "jest --watchAll --silent --colors --noStackTrace",
+    "test:all": "jest --watchAll --verbose --colors",
+    "test:staged": "jest  --passWithNoTests --silent --noStackTrace"
   },
   "standard": {
     "env": ["jest"]
