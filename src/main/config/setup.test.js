@@ -10,7 +10,7 @@ describe('App Setup', () => {
     expect(res.headers['x-powered-by']).toBeUndefined()
   })
 
-  test('Should enable cors', async () => {
+  test('Should enable CORS', async () => {
     app.get('/test_cors', (req, res) => {
       res.send('')
     })
