@@ -1,4 +1,4 @@
-const MongoHelper = require('../helper/mongo-helper')
+const MongoHelper = require('../helpers/mongo-helper')
 const MissingParamError = require('../../utils/errors/missing-param-error')
 const UpdateAccessTokenRepository = require('./update-access-token-repository')
 let db
@@ -38,7 +38,7 @@ describe('UpdateAccessToken Repository', () => {
     await MongoHelper.disconnect()
   })
 
-  test('Should update the user with given accessToken', async () => {
+  test('Should update the user with the given accessToken', async () => {
     const { sut, userModel } = makeSut()
     sut.update(fakeUserId, 'valid_token')
     const updatedFakeUser = await userModel.findOne({ _id: fakeUserId })
