@@ -5,11 +5,12 @@
   "main": "src/main/index.js",
   "scripts": {
     "start": "node src/main/index.js",
-    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
+    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand --no-cache",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests --silent",
-    "test:ci": "npm test -- --coverage --silent"
+    "test:ci": "npm test -- --coverage --silent",
+    "check": "npm-check -u -s"
   },
   "standard": {
     "env": [
@@ -20,19 +21,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@shelf/jest-mongodb": "^1.1.3",
-    "husky": "^4.0.0-beta.5",
-    "jest": "^24.9.0",
-    "lint-staged": "^9.4.3",
-    "standard": "^14.3.1",
+    "@shelf/jest-mongodb": "^1.2.2",
+    "husky": "^4.2.5",
+    "jest": "^26.4.0",
+    "lint-staged": "^10.2.11",
+    "standard": "^14.3.4",
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "fast-glob": "^3.2.4",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.3.5",
-    "validator": "^12.1.0"
+    "mongodb": "^3.6.0",
+    "validator": "^13.1.1"
   }
 }
